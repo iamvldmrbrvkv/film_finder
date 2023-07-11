@@ -42,8 +42,7 @@ Check the [TMDB documentation](https://developers.themoviedb.org/3/genres/get-mo
 
 10. Inside the if statement of our try block, we’ll capture the data that we need to populate our dropdown menu. To get the requested data, convert the response object to a JSON object. Await the resolution of this method and save it to a variable called jsonResponse.
 
-11. 
-To make sure your code is working, log jsonResponse to the console inside our if statement. You should see a single object with a single key, genres. The value of genres is an array that lists TMDB’s genres.
+11. To make sure your code is working, log jsonResponse to the console inside our if statement. You should see a single object with a single key, genres. The value of genres is an array that lists TMDB’s genres.
 
 Save the genres property of jsonResponse in a variable called genres. Log this variable to the console to confirm that it contains the correct information.
 
@@ -89,8 +88,7 @@ Modify getMovieInfo() by having it accept a parameter, movie. Then, inside the f
 
 19. Reference the [TMDB documentation](https://developers.themoviedb.org/3/movies/get-movie-details) to find the movie “Details” endpoint. Save it to a variable called movieEndpoint and replace {movie_id} in the endpoint with our movieId variable.
 
-20. 
-Let’s create our query params and the URL where we’ll send our fetch() request. Create a variable called requestParams and set it to be a query string with one parameter with api_key set to tmdbKey.
+20. Let’s create our query params and the URL where we’ll send our fetch() request. Create a variable called requestParams and set it to be a query string with one parameter with api_key set to tmdbKey.
 
 Create a variable called urlToFetch. Set it equal to a string that consists of tmdbBaseUrl, followed by movieEndpoint, then requestParams.
 
@@ -98,8 +96,7 @@ Create a variable called urlToFetch. Set it equal to a string that consists of t
 
 In the catch block, log any errors to the console. In the try block, use fetch() to send a GET request to urlToFetch. Await the response and save it to a variable called response.
 
-22. 
-Still inside the try block, create an if statement that checks if the .ok property of the response object evaluates to a truthy value.
+22. Still inside the try block, create an if statement that checks if the .ok property of the response object evaluates to a truthy value.
 
 Our response contains a single object with details about the given movie. Inside the if statement, convert this response to a JSON object. Await the resolution of this method, and save it to a variable called movieInfo.
 
@@ -122,5 +119,7 @@ Run your program to see movie suggestions. Like or dislike each movie to be show
 28. Congratulations! You’ve finished building the Film Finder project! If you’re looking for additional ways to challenge yourself, consider the following:
 
 Checkout the displayMovie() function in helpers.js to use the DOM to rearrange the layout of information on the page. Try displaying different types of information like cast, or release date.
+
 Create a way to store a user’s liked and disliked movies and display this list on the page.
+
 Our API call inside of getMovies() returns many pages of results, but currently our program only randomizes results from the first page. To randomize our results even more, update getMovies() so that movies contains results from a random page instead of the first page.
